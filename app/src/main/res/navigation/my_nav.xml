@@ -18,5 +18,9 @@
         android:id="@+id/imageFragment"
         android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.ImageFragment"
         android:label="Image Details"
-        tools:layout="@layout/fragment_image" />
+        tools:layout="@layout/fragment_image" >
+        <argument
+            android:name="image_data"
+            app:argType="com.arditakrasniqi.mymobilelife.data.model.Image" />
+    </fragment>
 </navigation>

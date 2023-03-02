@@ -28,7 +28,6 @@ class ListViewModel @Inject constructor(private var serviceAPI: ServiceAPI) : Vi
         Log.d("TAG", "getImages: ${response.body()}")
     }
 
-    /** Combo */
     fun getImagesFromAPI() = viewModelScope.launch {
         imagesFromAPI.value = DataState.Loading()
         try {
