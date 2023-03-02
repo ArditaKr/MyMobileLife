@@ -1,6 +1,9 @@
 package com.arditakrasniqi.mymobilelife.presentation.fragments
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.os.StrictMode
+import android.os.StrictMode.ThreadPolicy
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +17,9 @@ import com.arditakrasniqi.mymobilelife.adapter.ImageAdapter
 import com.arditakrasniqi.mymobilelife.data.model.Image
 import com.arditakrasniqi.mymobilelife.databinding.FragmentListBinding
 import com.arditakrasniqi.mymobilelife.utils.DataState
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class ListFragment : Fragment() {
@@ -36,6 +41,8 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         makeApiCall()
         populateData()
+
+
     }
 
     private fun makeApiCall() {
@@ -49,6 +56,10 @@ class ListFragment : Fragment() {
                 is DataState.Success -> {
                    // loadingDialog.dismiss()
                     recyclerDataArrayList = it.data!!
+
+                    Log.d(TAG, "GLIDE: ${it.data[0].url}")
+
+
                     imageAdapter.differ.submitList(recyclerDataArrayList)
                 }
 
@@ -63,7 +74,7 @@ class ListFragment : Fragment() {
 
     private fun populateData() {
 
-        imageAdapter = ImageAdapter()
+        imageAdapter = ImageAdapter(requireContext())
 
         binding.imageListRV.apply {
             adapter = imageAdapter
@@ -73,5 +84,11 @@ class ListFragment : Fragment() {
         imageAdapter.setOnItemClickListener { it, position ->
             findNavController().navigate(R.id.action_listFragment_to_imageFragment)
         }
+    }
+
+    fun test() {
+
+
+
     }
 }

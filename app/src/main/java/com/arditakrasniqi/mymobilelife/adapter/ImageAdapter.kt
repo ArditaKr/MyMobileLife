@@ -1,16 +1,21 @@
 package com.arditakrasniqi.mymobilelife.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.arditakrasniqi.mymobilelife.R
 import com.arditakrasniqi.mymobilelife.data.model.Image
 import com.arditakrasniqi.mymobilelife.databinding.ImageRowLayoutBinding
 import com.arditakrasniqi.mymobilelife.utils.setOnSingleClickListener
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 
 
-class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
+class ImageAdapter(private val context: Context) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
 
     private val differCallBack = object : DiffUtil.ItemCallback<Image>() {
         override fun areItemsTheSame(oldItem: Image, newItem: Image): Boolean {
@@ -49,8 +54,18 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(image: Image) {
             binding.author.text = image.author
-            binding.url.text = image.url.toString()
-            binding.downloadUrl.text = image.download_url.toString()
+//            binding.url.text = image.url.toString()
+//            binding.downloadUrl.text = image.download_url.toString()
+//            binding.imageWidth.text = context.resources.getString(R.string.app_name).plus(" ").plus(image.width.toString())
+//            binding.imageHeight.text = image.height.toString()
+
+
+            Glide.with(binding.authorImage)
+                .load(image.download_url)
+                .apply(RequestOptions().override(150, 120))
+                .transform(RoundedCorners(16))
+                .into(binding.authorImage)
+
 
             binding.root.setOnSingleClickListener {
                 selectedItem = position
@@ -61,6 +76,7 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
             }
         }
     }
+
     companion object {
         var selectedItem = -1
     }
@@ -70,4 +86,6 @@ class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
     fun setOnItemClickListener(listener: (Image, Int) -> Unit) {
         onItemClickListener = listener
     }
+
+
 }
