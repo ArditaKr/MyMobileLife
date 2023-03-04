@@ -1,12 +1,11 @@
-package com.arditakrasniqi.mymobilelife.presentation
+package com.arditakrasniqi.mymobilelife.presentation.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.arditakrasniqi.mymobilelife.R
 import com.arditakrasniqi.mymobilelife.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint

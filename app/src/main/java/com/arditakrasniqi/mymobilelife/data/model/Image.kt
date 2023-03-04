@@ -13,3 +13,5 @@ data class Image(
     val url: URL,
     val download_url: URL
 ): Parcelable
+
+

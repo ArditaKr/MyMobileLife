@@ -1,11 +1,11 @@
-package com.arditakrasniqi.mymobilelife.presentation.fragments
+package com.arditakrasniqi.mymobilelife.presentation.fragments.list_screens
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.arditakrasniqi.mymobilelife.data.api.ServiceAPI
 import com.arditakrasniqi.mymobilelife.data.model.Image
+import com.arditakrasniqi.mymobilelife.repository.RetrofitRepository
 import com.arditakrasniqi.mymobilelife.utils.DataState
 import com.arditakrasniqi.mymobilelife.utils.Errors
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,20 +18,23 @@ import java.net.UnknownHostException
 import javax.inject.Inject
 
 @HiltViewModel
-class ListViewModel @Inject constructor(private var serviceAPI: ServiceAPI) : ViewModel() {
+class ListViewModel @Inject constructor(private val retrofitRepository: RetrofitRepository) : ViewModel() {
 
     /** Retrofit*/
     var imagesFromAPI: MutableLiveData<DataState<List<Image>>> = MutableLiveData()
 
-    fun getImages() = viewModelScope.launch {
-        val response = serviceAPI.getImages()
-        Log.d("TAG", "getImages: ${response.body()}")
-    }
 
-    fun getImagesFromAPI() = viewModelScope.launch {
+//
+//    // 2
+//    fun fetchPosts(page: Int): Flow<PagingData<Image>> {
+//        return retrofitRepository.getImages(page).cachedIn(viewModelScope)
+//    }
+
+
+    fun getImagesFromAPI(currentPage: Int, limit: Int) = viewModelScope.launch {
         imagesFromAPI.value = DataState.Loading()
         try {
-            val response = serviceAPI.getImages()
+            val response = retrofitRepository.getImages(currentPage,limit)
             val imagesData = response.body()
             Log.d("TAG", "getImagesFromAPI 111: $imagesData")
             if (!imagesData.isNullOrEmpty()) {

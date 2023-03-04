@@ -3,24 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.ListFragment"
-        android:label="Image List "
-        tools:layout="@layout/fragment_list" >
+        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.list_screens.ListFragment"
+        android:label="Pagination using scroll listener"
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_imageFragment"
             app:destination="@id/imageFragment" />
     </fragment>
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.ImageFragment"
+        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.image_details_screens.ImageFragment"
         android:label="Image Details"
         tools:layout="@layout/fragment_image" >
         <argument
             android:name="image_data"
             app:argType="com.arditakrasniqi.mymobilelife.data.model.Image" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondListFragment"
+        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.list_screens.SecondListFragment"
+        android:label="Pagination using Paging library"
+        tools:layout="@layout/fragment_second_list">
+        <action
+            android:id="@+id/action_secondListFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_secondListFragment"
+            app:destination="@id/secondListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

@@ -21,11 +21,46 @@
 
     <style name="RoundedCorners">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.MyApp.Spinner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/grey_400</item>
+        <item name="boxStrokeColor">@color/background</item>
+        <item name="boxStrokeErrorColor">@color/background</item>
+        <item name="errorEnabled">true</item>
+        <item name="android:textColorHint">@color/mediumGray</item>
+        <item name="hintTextColor">@color/mediumGray</item>
+        <item name="materialThemeOverlay">@style/Theme.MyApp.Spinner.ThemeOverlay</item>
+    </style>
+
+    <style name="Theme.MyApp.Spinner.ThemeOverlay" parent="">
+        <item name="autoCompleteTextViewStyle">@style/Widget.MyApp.Spinner.ThemeOverlay.AutoCompleteTextView</item>
+        <item name="colorSurface">@color/grey_400</item>
+        <item name="colorOnSurface">@color/lightGray</item>
+    </style>
+    <!-- Text (NOT the popup) of the child AutoCompleteTextView of our material spinner -->
+    <style name="Widget.MyApp.Spinner.ThemeOverlay.AutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:background">@null</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- Material spinner 'item' layout style -->
+    <style name="Widget.MyApp.SpinnerItem" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">16dp</item>
     </style>
 
     <style name="Theme.MyMobileLife.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MyMobileLife.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/background</item>
+    </style>
 
 </resources>

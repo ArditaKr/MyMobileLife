@@ -63,9 +63,10 @@ object NetworkModule {
             .setLenient()
             .create()
 
+
     private val baseUrl by lazy { if (BuildConfig.DEBUG) PRODUCTION_URL else DEV_URL }
 
-    private const val DEV_URL = "https://picsum.photos/"
+    private const val DEV_URL = "https://picsum.photos/v2/"
     private const val LOCAL_URL = ""
     private const val PRODUCTION_URL = "https://picsum.photos/"
 
