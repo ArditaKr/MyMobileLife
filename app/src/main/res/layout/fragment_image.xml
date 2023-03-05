@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".presentation.fragments.image_details_screens.ImageFragment">
+    tools:context=".ui.fragments.using_scroll_view.image_details.ImageFragment">
 
 
     <ImageView
@@ -123,38 +123,47 @@
             android:textColor="@color/black"
             android:textSize="15sp" />
 
-
-        <info.hoang8f.android.segmented.SegmentedGroup
-            xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/segmented2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
-            segmentedgroup:sc_border_width="2dp"
-            segmentedgroup:sc_corner_radius="10dp">
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
 
-            <RadioButton
-                android:id="@+id/button1"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/normalImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="One"
-                style="@style/RadioButton" />
+                android:text="Normal"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background" />
 
-            <RadioButton
-                android:id="@+id/button2"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/grayscaleImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Two"
-                style="@style/RadioButton" />
+                android:text="GrayScale"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"/>
 
-            <RadioButton
-                android:id="@+id/button3"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/blurImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Three"
-                style="@style/RadioButton" />
-        </info.hoang8f.android.segmented.SegmentedGroup>
+                android:text="Blur"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

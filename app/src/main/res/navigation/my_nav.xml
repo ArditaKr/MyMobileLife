@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.list_screens.ListFragment"
+        android:name="com.arditakrasniqi.mymobilelife.ui.fragments.using_scroll_view.list_screen.ListFragment"
         android:label="Pagination using scroll listener"
         tools:layout="@layout/fragment_list">
         <action
@@ -16,25 +16,25 @@
     </fragment>
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.image_details_screens.ImageFragment"
+        android:name="com.arditakrasniqi.mymobilelife.ui.fragments.using_scroll_view.image_details.ImageFragment"
         android:label="Image Details"
         tools:layout="@layout/fragment_image" >
         <argument
-            android:name="image_data"
+            android:name="image"
             app:argType="com.arditakrasniqi.mymobilelife.data.model.Image" />
     </fragment>
     <fragment
         android:id="@+id/secondListFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.list_screens.SecondListFragment"
+        android:name="com.arditakrasniqi.mymobilelife.ui.fragments.using_paging_library.list_screen.SecondListFragment"
         android:label="Pagination using Paging library"
         tools:layout="@layout/fragment_second_list">
         <action
-            android:id="@+id/action_secondListFragment_to_imageFragment"
-            app:destination="@id/imageFragment" />
+            android:id="@+id/action_secondListFragment_to_secondImageFragment"
+            app:destination="@id/secondImageFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.arditakrasniqi.mymobilelife.presentation.fragments.home.HomeFragment"
+        android:name="com.arditakrasniqi.mymobilelife.ui.fragments.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -43,5 +43,14 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondImageFragment"
+        android:name="com.arditakrasniqi.mymobilelife.ui.fragments.using_paging_library.image_details.SecondImageFragment"
+        android:label="Image Details"
+        tools:layout="@layout/fragment_second_image">
+        <argument
+            android:name="image_details"
+            app:argType="com.arditakrasniqi.mymobilelife.data.model.Image" />
     </fragment>
 </navigation>

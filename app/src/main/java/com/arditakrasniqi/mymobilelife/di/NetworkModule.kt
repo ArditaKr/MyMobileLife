@@ -2,7 +2,7 @@ package com.arditakrasniqi.mymobilelife.di
 
 
 import androidx.viewbinding.BuildConfig
-import com.arditakrasniqi.mymobilelife.data.api.ServiceAPI
+import com.arditakrasniqi.mymobilelife.api.ServiceAPI
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -66,7 +66,7 @@ object NetworkModule {
 
     private val baseUrl by lazy { if (BuildConfig.DEBUG) PRODUCTION_URL else DEV_URL }
 
-    private const val DEV_URL = "https://picsum.photos/v2/"
+    private const val DEV_URL = "https://picsum.photos/"
     private const val LOCAL_URL = ""
     private const val PRODUCTION_URL = "https://picsum.photos/"
 
