@@ -20,7 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class ListFragment : Fragment(){
+class ListFragment : Fragment() {
     private val listViewModel by viewModels<ListViewModel>()
     lateinit var binding: FragmentListBinding
     private val loadingDialog: LoadingDialog by lazy { LoadingDialog(requireContext()) }
@@ -55,7 +55,7 @@ class ListFragment : Fragment(){
         listViewModel.imagesFromAPI.observe(viewLifecycleOwner) {
             when (it) {
                 is DataState.Loading -> {
-                  //  loadingDialog.show()
+                    //  loadingDialog.show()
                 }
 
                 is DataState.Success -> {
@@ -88,11 +88,12 @@ class ListFragment : Fragment(){
             //init adapter
             adapter = imageAdapter
             layoutManager = LinearLayoutManager(requireContext())
-            //scroll listener
+
+            // scroll listener
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     super.onScrollStateChanged(recyclerView, newState)
-                     //when recycler is not scrolling, after scrolling once, it means we can make an api call to get new data and load new page
+                    //when recycler is not scrolling, after scrolling once, it means we can make an api call to get new data and load new page
                     if (!binding.imageListRV.canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
                         isLoading = true
                         ++currentPage

@@ -49,6 +49,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Author Name"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             android:textColor="@color/background"
             android:textSize="17sp" />
 
@@ -57,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ardita Krasniqi"
+            android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -65,7 +68,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="URL"
-            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/background"
             android:textSize="15sp" />
 
 
@@ -74,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="URL value"
+            android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -81,7 +87,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Download URL"
-            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/background"
             android:textSize="15sp" />
 
 
@@ -90,6 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Donwload URL Value"
+            android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -97,6 +106,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Width "
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:textColor="@color/background"
             android:textSize="17sp" />
 
@@ -105,6 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ardita Krasniqi"
+            android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -112,6 +124,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Height"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:textColor="@color/background"
             android:textSize="17sp" />
 
@@ -120,6 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ardita Krasniqi"
+            android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
