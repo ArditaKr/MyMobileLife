@@ -43,6 +43,7 @@ class ListFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         makeApiCall()
         populateData()
 
@@ -54,7 +55,7 @@ class ListFragment : Fragment(){
         listViewModel.imagesFromAPI.observe(viewLifecycleOwner) {
             when (it) {
                 is DataState.Loading -> {
-                    loadingDialog.show()
+                  //  loadingDialog.show()
                 }
 
                 is DataState.Success -> {
@@ -84,12 +85,14 @@ class ListFragment : Fragment(){
         imageAdapter = ImageAdapter()
 
         binding.imageListRV.apply {
+            //init adapter
             adapter = imageAdapter
             layoutManager = LinearLayoutManager(requireContext())
+            //scroll listener
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     super.onScrollStateChanged(recyclerView, newState)
-
+                     //when recycler is not scrolling, after scrolling once, it means we can make an api call to get new data and load new page
                     if (!binding.imageListRV.canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
                         isLoading = true
                         ++currentPage
@@ -100,6 +103,7 @@ class ListFragment : Fragment(){
             }
             )
         }
+        //when an item from list is clicked navigate to view with more details
         imageAdapter.setOnItemClickListener { it, position ->
             findNavController().navigate(ListFragmentDirections.actionListFragmentToImageFragment(it))
         }

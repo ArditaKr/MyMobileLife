@@ -16,24 +16,33 @@ import com.bumptech.glide.request.RequestOptions
 
 class ImageAdapter : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
 
+
+    //we need a call back to tell the difference what changed in a list
     private val differCallBack = object : DiffUtil.ItemCallback<Image>() {
-        override fun areItemsTheSame(oldItem: Image, newItem: Image): Boolean {
+        override fun areItemsTheSame(oldItem: Image, newItem: Image): Boolean //Called to decide whether two objects represent the same item.
+        {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Image, newItem: Image): Boolean {
+        override fun areContentsTheSame(oldItem: Image, newItem: Image): Boolean //Called to decide whether two items have the same data.
+        // This information is used to detect if the contents of an item have changed.
+        {
             return oldItem == newItem
         }
     }
 
+    //differ initializes a AsyncListDiffer with 2 parameters :
+    // this - refers to current instance of ImageAdapter
+    //differCallBack - refers to the upper object and is used to calculate the difference between the old and new list
+    // and to dispatch the necessary update events to any registered observers.
     val differ = AsyncListDiffer(this, differCallBack)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        val binding =
-            ImageRowLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ImageRowLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ImageViewHolder(binding)
     }
 
+    //return size of list
     override fun getItemCount(): Int {
         return differ.currentList.size
     }

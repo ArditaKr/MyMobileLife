@@ -52,7 +52,7 @@ class ImageFragment : Fragment(
         initLayout()
         onClick()
     }
-
+    // getting object from previous fragment
     private fun getArgs(){
         val args: ImageFragmentArgs by navArgs()
         photo = args.image

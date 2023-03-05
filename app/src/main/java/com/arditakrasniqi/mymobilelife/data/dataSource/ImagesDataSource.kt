@@ -5,6 +5,9 @@ import com.arditakrasniqi.mymobilelife.data.model.Image
 import okhttp3.ResponseBody
 import javax.inject.Inject
 
+/**
+ * ImagesDataSource will be a source to communicate with API to get the data we need
+ * */
 class ImagesDataSource @Inject constructor(private val serviceAPI: ServiceAPI) {
 
     suspend fun getImages(page: Int, limit: Int): MutableList<Image>? =

@@ -50,7 +50,7 @@
         android:label="Image Details"
         tools:layout="@layout/fragment_second_image">
         <argument
-            android:name="image_details"
+            android:name="image"
             app:argType="com.arditakrasniqi.mymobilelife.data.model.Image" />
     </fragment>
 </navigation>

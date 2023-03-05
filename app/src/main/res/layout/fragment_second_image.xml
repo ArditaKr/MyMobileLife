@@ -1,162 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/imageLinearLayout"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".ui.fragments.using_paging_library.image_details.SecondImageFragment">
-
-
-<ImageView
-    android:id="@+id/authorImage"
-    android:layout_width="250dp"
-    android:layout_height="180dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="20dp"
-    android:src="@drawable/placeholder"
-    android:theme="@style/RoundedCorners"
-    />
-
-<LinearLayout
+    android:id="@+id/imageLinearLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
-    android:background="@drawable/rounded_background"
     android:orientation="vertical"
-    android:padding="20dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Image ID"
-        android:textColor="@color/background"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/imgIdValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:drawableStartCompat="@drawable/ic_baseline_person_24" />
+    tools:context=".ui.fragments.using_paging_library.image_details.SecondImageFragment">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Author Name"
-        android:textColor="@color/background"
-        android:textSize="17sp" />
+    <ImageView
+        android:id="@+id/authorImage"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/placeholder"
+        android:theme="@style/RoundedCorners"
+        />
 
-    <TextView
-        android:id="@+id/authorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ardita Krasniqi"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical"
+        android:padding="20dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image ID"
+            android:textColor="@color/background"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="URL"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
-
-
-    <TextView
-        android:id="@+id/url"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="URL value"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Download URL"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/imgIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/ic_baseline_person_24" />
 
 
-    <TextView
-        android:id="@+id/downloadURL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Donwload URL Value"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author Name"
+            android:textColor="@color/background"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Width "
-        android:textColor="@color/background"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/width"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ardita Krasniqi"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Height"
-        android:textColor="@color/background"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ardita Krasniqi"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ardita Krasniqi"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
 
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:weightSum="3"
-         android:layout_marginTop="30dp"
-         android:orientation="horizontal">
-
-         <androidx.appcompat.widget.AppCompatButton
-             android:id="@+id/normalImage"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:background="@color/background"
-             />
-         <androidx.appcompat.widget.AppCompatButton
-             android:id="@+id/blurImage"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:layout_marginStart="5dp"
-             android:background="@color/background"
-             />
-         <androidx.appcompat.widget.AppCompatButton
-             android:id="@+id/grayscaleImage"
-             android:layout_width="wrap_content"
-             android:layout_marginStart="5dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:background="@color/background"
-             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
 
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL value"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
-     </LinearLayout>
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download URL"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/downloadURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donwload URL Value"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Width "
+            android:textColor="@color/background"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ardita Krasniqi"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textColor="@color/background"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ardita Krasniqi"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/normalImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/grayscaleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GrayScale"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/blurImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blur"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

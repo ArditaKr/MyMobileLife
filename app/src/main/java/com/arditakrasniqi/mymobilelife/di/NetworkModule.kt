@@ -17,6 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+/** Module to connect with API via Retrofit */
+
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
@@ -63,7 +65,8 @@ object NetworkModule {
             .setLenient()
             .create()
 
-
+    //base url
+    // here we have the option to test appvia different urls, localhost, devUrl or production
     private val baseUrl by lazy { if (BuildConfig.DEBUG) PRODUCTION_URL else DEV_URL }
 
     private const val DEV_URL = "https://picsum.photos/"

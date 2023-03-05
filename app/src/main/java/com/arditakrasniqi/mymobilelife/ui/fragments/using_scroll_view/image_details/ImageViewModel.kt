@@ -17,7 +17,7 @@ import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import javax.inject.Inject
-
+/** viewmodel based on MVVVM will communicate with use case to send data to fragment */
 
 @HiltViewModel
 class ImageViewModel @Inject constructor(private val getImagesUseCase: GetImagesUseCase) : ViewModel() {
@@ -26,7 +26,7 @@ class ImageViewModel @Inject constructor(private val getImagesUseCase: GetImages
     var blurImageFromAPI: MutableLiveData<DataState<ResponseBody>> = MutableLiveData()
     var grayscaleImageFromAPI: MutableLiveData<DataState<ResponseBody>> = MutableLiveData()
 
-    //handling errors could be a better way but wasn't mandatory :D
+    //handling errors could be a better way but wasn't mandatory for now :D
 
 
     fun getBlurImageFromAPI(photoId: String, width: Int, height: Int) = viewModelScope.launch {

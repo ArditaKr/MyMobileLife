@@ -1,5 +1,8 @@
 package com.arditakrasniqi.mymobilelife.utils
 
+/** This class will help us to handle the response from API
+ * Here we have three states : [Success, Loading, Error]
+ * */
 sealed class DataState<T>(
     val data: T? = null,
     val message: String? = null,
