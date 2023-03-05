@@ -3,10 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable-v24/button_background.xml" value="0.2535" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable-v24/ic_refresh_black_24dp.xml" value="0.2615" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable-v24/rety_selector.xml" value="0.2615" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable-v24/shape_retry_round.xml" value="0.2535" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable-v24/shape_retry_round_selected.xml" value="0.2535" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable/bg_circle_white.xml" value="0.1" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable/ic_baseline_autorenew_24.xml" value="0.1" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable/my_spinner_background.xml" value="0.2535" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/drawable/rounded_background.xml" value="0.3285" />
         <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_image.xml" value="0.2046875" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/activity_splash.xml" value="0.24375" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/app_bar_main.xml" value="0.3076923076923077" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/content_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/dialog_loading.xml" value="0.2" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/footer_dialog_loading.xml" value="0.21603260869565216" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_home.xml" value="0.17572463768115942" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_image.xml" value="0.264" />
         <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_list.xml" value="0.2046875" />
-        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/image_row_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_second_image.xml" value="0.2" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/fragment_second_list.xml" value="0.25407608695652173" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/image_row_layout.xml" value="0.33" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/item_loading.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/item_movie.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/item_movies.xml" value="0.33" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/item_network_state.xml" value="0.25407608695652173" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/load_more.xml" value="0.6" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/ly_error_layout.xml" value="0.371875" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/material_spinner_item.xml" value="0.25407608695652173" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/layout/toolbar.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/menu/menu_fragment_b.xml" value="0.35208333333333336" />
+        <entry key="..\:/Users/keds30682/Desktop/MyMobileLife/app/src/main/res/xml/network_security_config.xml" value="0.2109375" />
       </map>
     </option>
   </component>
