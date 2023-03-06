@@ -28,6 +28,8 @@ Wait for Android Studio to finish building the project. Once the build is comple
 How it Works
 The app uses the Paging 3 library to load data from an API in chunks. The data is displayed in a RecyclerView using a custom adapter. The adapter uses a DiffUtil callback to efficiently update the contents of the RecyclerView when new data is loaded.
 
+Project is developed based on MVVM Architecture: 
+
 The app uses a ViewModel to manage the state of the data and the pagination. The ViewModel exposes a MutableLiveData object that contains the data to be displayed in the RecyclerView. The MutableLiveData object is observed by the Fragment, which updates the RecyclerView when new data is loaded.
 
 The app uses Retrofit to fetch data from an API. The Retrofit service is defined in the ServiceAPI interface. The app uses a Repository class to manage the API calls 
